@@ -6,7 +6,7 @@ const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
 // variables
-let userText = "";
+let userText;
 let errorCount = 0;
 let startTime;
 let questionText = "";
@@ -113,7 +113,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
